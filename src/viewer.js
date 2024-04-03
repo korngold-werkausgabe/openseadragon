@@ -2654,9 +2654,10 @@ function getTileSourceImplementation( viewer, tileSource, imgOptions, successCal
                 url: tileSource,
                 crossOriginPolicy: imgOptions.crossOriginPolicy !== undefined ?
                     imgOptions.crossOriginPolicy : viewer.crossOriginPolicy,
+                loadWithAjax: viewer.loadWithAjax,
                 ajaxWithCredentials: viewer.ajaxWithCredentials,
-                ajaxHeaders: imgOptions.ajaxHeaders ?
-                    imgOptions.ajaxHeaders : viewer.ajaxHeaders,
+                ajaxHeaders: viewer.ajaxHeaders ? viewer.ajaxHeaders :
+                    imgOptions.ajaxHeaders,
                 splitHashDataForPost: viewer.splitHashDataForPost,
                 success: function( event ) {
                     successCallback( event.tileSource );

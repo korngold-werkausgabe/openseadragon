@@ -1986,7 +1986,7 @@ $.extend($.TiledImage.prototype, $.EventSource.prototype, /** @lends OpenSeadrag
             source: this.source,
             postData: tile.postData,
             loadWithAjax: tile.loadWithAjax,
-            ajaxHeaders: tile.ajaxHeaders,
+            ajaxHeaders: this.ajaxHeaders,
             crossOriginPolicy: this.crossOriginPolicy,
             ajaxWithCredentials: this.ajaxWithCredentials,
             callback: function( data, errorMsg, tileRequest ){
